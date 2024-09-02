@@ -115,7 +115,7 @@ export default function Register() {
         setSucssesMsg(data.message);
 
         setTimeout(() => {
-          navigator("/");
+          navigator("/E-CommerceApp");
         }, 1000);
       })
       .catch((err) => {
