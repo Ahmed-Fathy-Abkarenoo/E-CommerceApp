@@ -59,50 +59,6 @@ export default function Register() {
       }),
     });
 
-  // function dataValidation() {
-  //   let errors = {};
-
-  //   if (values.name == "") {
-  //     errors.name = "Name is required";
-  //   } else if (values.name.length < 2) {
-  //     errors.name = "Name must be more than 2 character";
-  //   } else if (values.name.length > 20) {
-  //     errors.name = "Name must be less than 20 character";
-  //   }
-
-  //   if (values.email == "") {
-  //     errors.email = "Email is required";
-  //   } else if (
-  //     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/gi.test(values.email) !=
-  //     true
-  //   ) {
-  //     errors.email = "Invalid email";
-  //   }
-
-  //   if (values.password == "") {
-  //     errors.password = "Password is required";
-  //   } else if (
-  //     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,20}$/gi.test(
-  //       values.password
-  //     ) != true
-  //   ) {
-  //     errors.password =
-  //       "Min 8 character, Max 20 character, At least one uppercase , one lowercase & one special character";
-  //   }
-
-  //   if (values.rePassword == "") {
-  //     errors.rePassword = "RePassword is required";
-  //   } else if (values.rePassword != values.password) {
-  //     errors.rePassword = "repass and pass not matched";
-  //   }
-
-  //   if (values.phone == "") {
-  //     errors.phone = "Phone is required";
-  //   }
-
-  //   return errors;
-  // }
-
   async function register() {
     setErrorMsg("");
     setSucssesMsg("");
