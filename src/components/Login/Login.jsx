@@ -63,7 +63,7 @@ export default function Login() {
       setUserToken(data.token);
       localStorage.setItem("Token", data.token);
       location.pathname == "/E-CommerceApp/"
-        ? navigator("/home")
+        ? navigator("/E-CommerceApp/home")
         : navigator(location.pathname);
       getCart();
     } catch (error) {
