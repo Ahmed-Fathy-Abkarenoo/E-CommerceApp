@@ -138,7 +138,7 @@ export default function Login() {
             </div>
             <div className="text-end">
               <Link
-                to={"/forgotpassword"}
+                to={"forgotpassword"}
                 className="inline-flex items-center gap-2 text-sm font-medium text-green-500 underline hover:no-underline dark:text-green-500">
                 Forgot Password
                 <svg
