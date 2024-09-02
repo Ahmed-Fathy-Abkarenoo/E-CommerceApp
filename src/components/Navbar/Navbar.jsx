@@ -129,7 +129,9 @@ export default function Navbar() {
         <div className="container mx-auto flex justify-between items-center gap-5 px-4 py-3">
           <div className="nav-container flex justify-center items-center gap-4">
             <div className="logo">
-              <Link to="/" className="text-xl lg:text-2xl font-bold flex gap-2">
+              <Link
+                to="/E-CommerceApp"
+                className="text-xl lg:text-2xl font-bold flex gap-2">
                 <span className="text-green-700">
                   <FaShoppingCart />
                 </span>
