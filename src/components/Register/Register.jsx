@@ -256,7 +256,9 @@ export default function Register() {
             <span className="text-sm text-gray-500 dark:text-gray-300">
               Already have an account?{" "}
             </span>
-            <Link to="/" className="text-green-500 hover:text-green-600">
+            <Link
+              to="/E-CommerceApp"
+              className="text-green-500 hover:text-green-600">
               Login
             </Link>
           </div>

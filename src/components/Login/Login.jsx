@@ -170,7 +170,7 @@ export default function Login() {
               Do not have an account?
             </span>
             <Link
-              to="/register"
+              to="/E-CommerceApp/register"
               className="text-green-500 hover:text-green-600">
               Register
             </Link>
