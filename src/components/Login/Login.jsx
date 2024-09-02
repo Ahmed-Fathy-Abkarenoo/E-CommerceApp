@@ -169,9 +169,7 @@ export default function Login() {
             <span className="text-sm text-gray-500 dark:text-gray-300 me-2">
               Do not have an account?
             </span>
-            <Link
-              to="/register"
-              className="text-green-500 hover:text-green-600">
+            <Link to="register" className="text-green-500 hover:text-green-600">
               Register
             </Link>
           </div>
