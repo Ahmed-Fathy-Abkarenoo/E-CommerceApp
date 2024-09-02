@@ -38,7 +38,7 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "register",
+          path: "/register",
           element: (
             <AuthGuard>
               <Register />
@@ -46,7 +46,7 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "home",
+          path: "/home",
           element: (
             <RouteGuard>
               <Home />
@@ -54,16 +54,18 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "categories",
+          path: "/categories",
           element: (
             <RouteGuard>
               <Categories />
             </RouteGuard>
           ),
-          children: [{ path: "subcategories/:id", element: <SubCategories /> }],
+          children: [
+            { path: "/subcategories/:id", element: <SubCategories /> },
+          ],
         },
         {
-          path: "brands",
+          path: "/brands",
           element: (
             <RouteGuard>
               <Brands />
@@ -71,7 +73,7 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "products",
+          path: "/products",
           element: (
             <RouteGuard>
               <Products />
@@ -79,7 +81,7 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "cart",
+          path: "/cart",
           element: (
             <RouteGuard>
               <Cart />
@@ -87,7 +89,7 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "checkout/:cartId",
+          path: "/checkout/:cartId",
           element: (
             <RouteGuard>
               <CheckOut />
@@ -95,7 +97,7 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "allorders",
+          path: "/allorders",
           element: (
             <RouteGuard>
               <Orders />
@@ -103,7 +105,7 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "wishlist",
+          path: "/wishlist",
           element: (
             <RouteGuard>
               <WishList />
@@ -111,7 +113,7 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "productdetails/:id",
+          path: "/productdetails/:id",
           element: (
             <RouteGuard>
               <ProductDetails />
@@ -119,7 +121,7 @@ export default function AppRouter() {
           ),
         },
         {
-          path: "forgotpassword",
+          path: "/forgotpassword",
           element: <ForgotPassword />,
         },
         { path: "*", element: <NotFound /> },
