@@ -26,7 +26,7 @@ export default function AppRouter() {
 
   const appRouter = createBrowserRouter([
     {
-      path: "",
+      path: "E-CommerceApp",
       element: <Layout />,
       children: [
         {
