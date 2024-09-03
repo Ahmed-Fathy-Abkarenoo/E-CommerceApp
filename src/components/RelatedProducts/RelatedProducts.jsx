@@ -12,7 +12,7 @@ export default function RelatedProducts({ products }) {
               <div
                 className="col-span-1 product  shadow-2xl rounded-lg cursor-pointer"
                 key={index}>
-                <Link to={"/productdetails/" + reProduct._id}>
+                <Link to={"/E-CommerceApp/productdetails/" + reProduct._id}>
                   <div className="p-4">
                     <div>
                       <img
