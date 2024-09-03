@@ -61,9 +61,9 @@ export default function BrandProducts() {
                   </>
                 ) : (
                   <>
-                    {brandProducts == 0 && (
+                    {brandProducts == 0 && !isLoading && (
                       <div className=" col-span-12">
-                        <p className="text-4xl font-medium text-green-500 text-center animate__animated animate__slideInLeft">
+                        <p className="text-4xl font-medium text-green-500 text-center mb-10 animate__animated animate__slideInLeft">
                           Coming Soon........
                         </p>
                       </div>
