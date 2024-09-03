@@ -60,11 +60,15 @@ export default function BrandProducts() {
                     })}
                   </>
                 ) : (
-                  <div className=" col-span-12">
-                    <p className="text-4xl font-medium text-green-500 text-center animate__animated animate__slideInLeft">
-                      Coming Soon........
-                    </p>
-                  </div>
+                  <>
+                    {isLoading && (
+                      <div className=" col-span-12">
+                        <p className="text-4xl font-medium text-green-500 text-center animate__animated animate__slideInLeft">
+                          Coming Soon........
+                        </p>
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             </>
