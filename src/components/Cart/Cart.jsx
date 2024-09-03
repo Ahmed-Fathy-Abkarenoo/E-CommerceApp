@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Style from "./Cart.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CartItems from "../CartItems/CartItems";
@@ -31,7 +30,6 @@ export default function Cart() {
       }
     );
 
-    // console.log(data);
     setCartItems(data);
     setCartCount(data.numOfCartItems);
 

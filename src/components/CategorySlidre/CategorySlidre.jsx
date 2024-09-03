@@ -1,5 +1,4 @@
 import React from "react";
-import Style from "./CategorySlidre.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Slider from "react-slick";
@@ -17,7 +16,6 @@ export default function CategorySlidre() {
       "https://ecommerce.routemisr.com/api/v1/categories"
     );
 
-    // console.log(data);
     setCategories(data.data);
   }
 

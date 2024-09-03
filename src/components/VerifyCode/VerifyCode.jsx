@@ -4,7 +4,6 @@ import { FaSpinner } from "react-icons/fa6";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import Style from "./VerifyCode.module.css";
 
 export default function VerifyCode() {
   const [isLoading, setIsLoading] = useState(false);

@@ -1,13 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { FaSpinner } from "react-icons/fa6";
-import { AuthContext } from "../../Contexts/AuthContext";
 import { Helmet } from "react-helmet";
-import { CartCountContext } from "../../Contexts/CartCounter";
 import VerifyCode from "../VerifyCode/VerifyCode";
 
 export default function ForgotPassword() {

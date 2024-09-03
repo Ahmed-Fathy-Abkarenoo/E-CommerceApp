@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./../Layout/Layout";
 import Login from "./../Login/Login";
@@ -20,10 +19,6 @@ import Orders from "../Orders/Orders";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
 
 export default function AppRouter() {
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {}, []);
-
   const appRouter = createBrowserRouter([
     {
       path: "E-CommerceApp",

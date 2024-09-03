@@ -1,13 +1,7 @@
 import React from "react";
-import Style from "./OrderSummary.module.css";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function OrderSummary({ cartItems }) {
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {}, []);
-
   return (
     <>
       <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">

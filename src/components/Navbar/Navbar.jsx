@@ -4,7 +4,6 @@ import { FaShoppingCart } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaTimes } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import Style from "./Navbar.module.css";
 import { FaInstagram, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa6";
 import { AuthContext } from "../../Contexts/AuthContext";
 import { CartCountContext } from "../../Contexts/CartCounter";

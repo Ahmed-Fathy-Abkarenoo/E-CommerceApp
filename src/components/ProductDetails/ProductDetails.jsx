@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Style from "./ProductDetails.module.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -32,7 +31,6 @@ export default function ProductDetails() {
     axios
       .get("https://ecommerce.routemisr.com/api/v1/products/" + id)
       .then(({ data }) => {
-        // console.log(data.data);
         setProductDetail(data.data);
         setImages(Array.from(data.data.images));
         getRelatedProduct(data.data?.category._id);

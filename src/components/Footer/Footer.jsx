@@ -1,5 +1,4 @@
 import React from "react";
-import Style from "./Footer.module.css";
 import GooglePlayLogo from "./../../assets/images/google-play-badge-2022-2.svg";
 import AppStoreLogo from "./../../assets/images/Download_on_the_App_Store_Badge.svg.png";
 import amazonPay from "./../../assets/images/amazon-pay-1.svg";

@@ -1,5 +1,4 @@
 import React from "react";
-import Style from "./Brands.module.css";
 import { useState, useEffect } from "react";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 import axios from "axios";
@@ -13,7 +12,6 @@ export default function Brands() {
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
-    // console.log(event);
   };
 
   useEffect(() => {
@@ -27,7 +25,6 @@ export default function Brands() {
       let { data } = await axios.get(
         `https://ecommerce.routemisr.com/api/v1/brands?page=${page}`
       );
-      // console.log(data.data);
 
       setBrands(data.data);
       setIsLoading(false);

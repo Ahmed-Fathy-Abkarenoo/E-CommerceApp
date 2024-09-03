@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import Style from "./WishItem.module.css";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { addToCart } from "../../services/cartServices";
@@ -9,10 +7,7 @@ import axios from "axios";
 import { Bounce, toast } from "react-toastify";
 
 export default function WishItem({ wishListItems, getWishList }) {
-  const [counter, setCounter] = useState(0);
   const { cartCount, setCartCount } = useContext(CartCountContext);
-
-  useEffect(() => {}, []);
 
   async function removeFromWishList(productId) {
     let { data } = await axios.delete(
@@ -23,8 +18,6 @@ export default function WishItem({ wishListItems, getWishList }) {
         },
       }
     );
-
-    // console.log(data);
 
     toast.success("Item Removed", {
       position: "top-right",

@@ -1,6 +1,4 @@
 import React, { useRef } from "react";
-import Style from "./MainSlider.module.css";
-import { useEffect } from "react";
 import Slider from "react-slick";
 import cover1 from "../../assets/images/ps.jpeg";
 import cover2 from "../../assets/images/—Pngtree—fruits tropical_4172131.png";
@@ -9,8 +7,6 @@ import slideImg2 from "../../assets/images/slider-image-2.jpeg";
 import slideImg3 from "../../assets/images/slider-image-3.jpeg";
 
 export default function MainSlider() {
-  useEffect(() => {}, []);
-
   let sliderRef = useRef(null);
   const next = () => {
     sliderRef.slickNext();

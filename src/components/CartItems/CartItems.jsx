@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import Style from "./CartItems.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { addToWishList } from "../../services/wishListServices";
 import { CartCountContext } from "../../Contexts/CartCounter";
@@ -12,7 +11,7 @@ export default function CartItems({ item, setCartItems, setDataLoading }) {
   const [isLoadingIncrese, setIsLoadingIncrese] = useState(false);
   const [isLoadingDecrese, setIsLoadingDecrese] = useState(false);
   const [productCount, setProductCount] = useState(item.count);
-  const { cartCount, setCartCount } = useContext(CartCountContext);
+  const { setCartCount } = useContext(CartCountContext);
 
   async function removeFromCart(productId) {
     setDataLoading(true);
@@ -24,8 +23,6 @@ export default function CartItems({ item, setCartItems, setDataLoading }) {
         },
       }
     );
-
-    // console.log(data);
 
     toast.success("Item Removed", {
       position: "top-right",
@@ -57,8 +54,6 @@ export default function CartItems({ item, setCartItems, setDataLoading }) {
         },
       }
     );
-
-    // console.log(data);
 
     setCartItems(data);
     setCartCount(data.numOfCartItems);

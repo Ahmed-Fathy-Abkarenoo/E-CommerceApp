@@ -1,23 +1,20 @@
 import React from "react";
-import Style from "./Products.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Product from "./../Product/Product";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 import Pagination from "@mui/material/Pagination";
 import LoadingScreen2 from "../LoadingScreen2/LoadingScreen2";
-import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Home() {
-  // const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
   };
 
   useEffect(() => {
-    // getProducts();
     window.scrollTo(0, 0);
   }, [page]);
 
@@ -35,20 +32,6 @@ export default function Home() {
     retryDelay: 2000,
     select: (data) => data.data.data,
   });
-
-  // async function getProducts() {
-  //   setIsLoading(true);
-  //   try {
-  //     let { data } = await axios.get(
-  //       `https://ecommerce.routemisr.com/api/v1/products?page=${page}`
-  //     );
-  //     // console.log(data.data);
-  //     setProducts(data.data);
-  //     setIsLoading(false);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
 
   return (
     <>

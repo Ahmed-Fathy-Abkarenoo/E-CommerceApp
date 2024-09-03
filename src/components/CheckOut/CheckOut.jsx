@@ -4,7 +4,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { FaSpinner } from "react-icons/fa6";
-import Style from "./CheckOut.module.css";
 import { useParams } from "react-router-dom";
 
 export default function CheckOut() {
@@ -54,8 +53,6 @@ export default function CheckOut() {
       setIsLoading(false);
     }
   }
-
-  //"66c678aeed0dc0016cee72b8"
 
   return (
     <>

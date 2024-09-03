@@ -1,5 +1,4 @@
 import React from "react";
-import Style from "./SubCategories.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";

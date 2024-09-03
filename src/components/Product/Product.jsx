@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Style from "./Product.module.css";
 import { FaHeart } from "react-icons/fa6";
 import RatingStars from "../RatingStars/RatingStars";
 import { Link } from "react-router-dom";
@@ -14,7 +13,7 @@ export default function Product({ product }) {
     <>
       <div className="col-span-1 product rounded-md">
         <div className="px-2 pb-2">
-          <Link to={"/productdetails/" + product._id}>
+          <Link to={"/E-CommerceApp/productdetails/" + product._id}>
             <div className="product-image">
               <img
                 src={product.imageCover}
@@ -33,7 +32,6 @@ export default function Product({ product }) {
           <div className="product-rate flex justify-between">
             <span className="flex items-center gap-1">
               <RatingStars rating={product.ratingsAverage} />
-              {/* <MdStarRate /> */}
               <span className="bg-blue-200 rounded-md px-2">
                 {product.ratingsAverage}
               </span>

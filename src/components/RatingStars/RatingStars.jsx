@@ -1,12 +1,6 @@
 import React from "react";
-import Style from "./RatingStars.module.css";
-import { useState, useEffect } from "react";
 
 export default function RatingStars({ rating }) {
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {}, []);
-
   const ratingValue = [1, 2, 3, 4, 5];
 
   return (

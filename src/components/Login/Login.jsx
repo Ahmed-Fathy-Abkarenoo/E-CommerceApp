@@ -5,7 +5,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { FaSpinner } from "react-icons/fa6";
-import Style from "./Login.module.css";
 import { AuthContext } from "../../Contexts/AuthContext";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { CartCountContext } from "../../Contexts/CartCounter";

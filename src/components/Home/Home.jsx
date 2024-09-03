@@ -1,5 +1,4 @@
 import React from "react";
-import Style from "./Home.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Product from "./../Product/Product";
@@ -23,12 +22,9 @@ export default function Home() {
       let { data } = await axios.get(
         "https://ecommerce.routemisr.com/api/v1/products"
       );
-      // console.log(data.data);
       setProducts(data.data);
       setIsLoading(false);
-    } catch (error) {
-      // console.log(error);
-    }
+    } catch (error) {}
   }
 
   return (

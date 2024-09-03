@@ -1,8 +1,6 @@
 import React from "react";
-import Style from "./WishList.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import CartItems from "../CartItems/CartItems";
 import WishItem from "../WishItem/WishItem";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -12,7 +10,6 @@ export default function WishList() {
   const [wishListItems, setWishListItems] = useState([]);
   const [wishCount, setWishCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  const [dataLoading, setDataLoading] = useState(false);
 
   useEffect(() => {
     getWishList();
@@ -31,7 +28,6 @@ export default function WishList() {
       }
     );
 
-    // console.log(data);
     setWishCount(data.count);
     setWishListItems(data.data);
     setIsLoading(false);
@@ -70,8 +66,6 @@ export default function WishList() {
                 getWishList={getWishList}
               />
             )}
-
-            {/* <WishItem wishListItems={wishListItems} getWishList={getWishList} /> */}
           </div>
         </div>
       </section>

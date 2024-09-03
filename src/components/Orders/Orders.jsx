@@ -1,5 +1,4 @@
 import React from "react";
-import Style from "./Orders.module.css";
 import { useState, useEffect } from "react";
 
 export default function Orders() {
