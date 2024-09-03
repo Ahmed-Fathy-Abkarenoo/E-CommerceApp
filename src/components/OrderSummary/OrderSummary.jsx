@@ -37,7 +37,7 @@ export default function OrderSummary({ cartItems }) {
           </dl>
         </div>
         <Link
-          to={"/checkout/" + cartItems?.cartId}
+          to={"/E-CommerceApp/checkout/" + cartItems?.cartId}
           className="flex w-full items-center justify-center rounded-lg bg-green-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
           Proceed to Checkout
         </Link>
@@ -46,7 +46,7 @@ export default function OrderSummary({ cartItems }) {
             or
           </span>
           <Link
-            to={"/products"}
+            to={"products"}
             className="inline-flex items-center gap-2 text-sm font-medium text-green-500 underline hover:no-underline dark:text-green-500">
             Continue Shopping
             <svg
