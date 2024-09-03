@@ -5,6 +5,7 @@ import axios from "axios";
 import Pagination from "@mui/material/Pagination";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import LoadingScreen2 from "../LoadingScreen2/LoadingScreen2";
+import { Link } from "react-router-dom";
 
 export default function Brands() {
   const [brands, setBrands] = useState([]);
@@ -50,18 +51,20 @@ export default function Brands() {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">
               {brands.map((brand, index) => {
                 return (
-                  <div
-                    className="col-span-1 border rounded-md p-2 product"
-                    key={index}>
-                    <div className="brand-card text-center">
-                      <div className="brand-logo">
-                        <img src={brand.image} alt="" />
-                      </div>
-                      <div className="brand-name">
-                        <h2>{brand.name}</h2>
+                  <Link to={"/E-CommerceApp/brandproducts/" + brand._id}>
+                    <div
+                      className="col-span-1 border rounded-md p-2 product"
+                      key={index}>
+                      <div className="brand-card text-center">
+                        <div className="brand-logo">
+                          <img src={brand.image} alt="logo" />
+                        </div>
+                        <div className="brand-name">
+                          <h2>{brand.name}</h2>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>

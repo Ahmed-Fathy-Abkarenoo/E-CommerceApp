@@ -17,6 +17,7 @@ import SubCategories from "../SubCategories/SubCategories";
 import CheckOut from "../CheckOut/CheckOut";
 import Orders from "../Orders/Orders";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
+import BrandProducts from "../BrandProducts/BrandProducts";
 
 export default function AppRouter() {
   const appRouter = createBrowserRouter([
@@ -62,6 +63,14 @@ export default function AppRouter() {
           element: (
             <RouteGuard>
               <Brands />
+            </RouteGuard>
+          ),
+        },
+        {
+          path: "brandproducts/:id",
+          element: (
+            <RouteGuard>
+              <BrandProducts />
             </RouteGuard>
           ),
         },
