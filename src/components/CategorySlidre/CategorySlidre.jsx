@@ -67,7 +67,9 @@ export default function CategorySlidre() {
       <Slider {...settings}>
         {categories.map((catImg, index) => {
           return (
-            <Link to={"/categories/subcategories/" + catImg._id} key={index}>
+            <Link
+              to={"/E-CommerceApp/categories/subcategories/" + catImg._id}
+              key={index}>
               <div className="lg:w-40 lg:h-40">
                 <img
                   className="w-full h-64 lg:w-40 lg:h-40"
