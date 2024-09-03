@@ -46,7 +46,7 @@ export default function OrderSummary({ cartItems }) {
             or
           </span>
           <Link
-            to={"products"}
+            to={"/E-CommerceApp/products"}
             className="inline-flex items-center gap-2 text-sm font-medium text-green-500 underline hover:no-underline dark:text-green-500">
             Continue Shopping
             <svg
