@@ -27,6 +27,7 @@ export default function WishList() {
         },
       }
     );
+    // console.log(data.data);
 
     setWishCount(data.count);
     setWishListItems(data.data);

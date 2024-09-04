@@ -9,6 +9,11 @@ import { Bounce, toast } from "react-toastify";
 export default function WishItem({ wishListItems, getWishList }) {
   const { cartCount, setCartCount } = useContext(CartCountContext);
 
+  const handleAddClick = async () => {
+    const count = await addToCart(item._id);
+    setCartCount(count);
+  };
+
   async function removeFromWishList(productId) {
     let { data } = await axios.delete(
       `https://ecommerce.routemisr.com/api/v1/wishlist/${productId}`,
@@ -89,8 +94,7 @@ export default function WishItem({ wishListItems, getWishList }) {
                   <div className="flex items-center gap-4">
                     <button
                       onClick={() => {
-                        addToCart(item._id);
-                        setCartCount(cartCount + 1);
+                        handleAddClick();
                       }}
                       type="button"
                       className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-white">

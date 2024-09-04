@@ -13,9 +13,9 @@ export default function BrandProducts() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     getBrandProducts(id);
     getBrand(id);
-    window.scrollTo(0, 0);
   }, []);
 
   async function getBrandProducts(brandId) {

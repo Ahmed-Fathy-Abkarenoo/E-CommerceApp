@@ -7,7 +7,6 @@ import axios from "axios";
 import { FaSpinner } from "react-icons/fa6";
 import { AuthContext } from "../../Contexts/AuthContext";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { CartCountContext } from "../../Contexts/CartCounter";
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
@@ -18,7 +17,6 @@ export default function Login() {
   useEffect(() => {}, []);
 
   const { setUserToken } = useContext(AuthContext);
-  let { setCartCount } = useContext(CartCountContext);
 
   const initialValues = {
     email: "",
@@ -69,16 +67,6 @@ export default function Login() {
       setIsLoading(false);
       setErrorMsg(error.response.data.message);
     }
-  }
-
-  async function getCart() {
-    axios
-      .get("https://ecommerce.routemisr.com/api/v1/cart", {
-        headers: { token: localStorage.getItem("Token") },
-      })
-      .then((data) => {
-        setCartCount(data.numOfCartItems);
-      });
   }
 
   return (

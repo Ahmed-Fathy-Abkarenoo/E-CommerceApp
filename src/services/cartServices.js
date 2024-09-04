@@ -14,7 +14,6 @@ export async function addToCart(productId) {
     }
   );
 
-  // console.log(data);
   toast.success(data.message, {
     position: "top-right",
     autoClose: 4000,
@@ -26,4 +25,6 @@ export async function addToCart(productId) {
     theme: "light",
     transition: Bounce,
   });
+
+  return data.numOfCartItems;
 }

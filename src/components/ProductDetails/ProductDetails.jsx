@@ -21,6 +21,11 @@ export default function ProductDetails() {
   const [isLoading, setIsLoading] = useState(false);
   const { cartCount, setCartCount } = useContext(CartCountContext);
 
+  const handleAddClick = async () => {
+    const count = await addToCart(productDetail?._id);
+    setCartCount(count);
+  };
+
   useEffect(() => {
     getProductDetails();
     window.scrollTo(0, 0);
@@ -121,8 +126,7 @@ export default function ProductDetails() {
                 <div className="flex items-center justify-around mt-6">
                   <button
                     onClick={() => {
-                      addToCart(productDetail?._id);
-                      setCartCount(cartCount + 1);
+                      handleAddClick();
                     }}
                     className="bg-green-500 px-6 py-1 rounded-lg text-white">
                     Add To Cart

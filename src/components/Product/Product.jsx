@@ -1,13 +1,61 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa6";
 import RatingStars from "../RatingStars/RatingStars";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../services/cartServices";
 import { addToWishList } from "../../services/wishListServices";
 import { CartCountContext } from "../../Contexts/CartCounter";
+import axios from "axios";
+import { Bounce, toast } from "react-toastify";
+import { WishedItemsContext } from "../../Contexts/WishedItems";
 
 export default function Product({ product }) {
-  const { cartCount, setCartCount } = useContext(CartCountContext);
+  const { setCartCount } = useContext(CartCountContext);
+  const [wishFlag, setWishFlag] = useState(false);
+
+  const { wishedItems } = useContext(WishedItemsContext);
+
+  const handleWishClick = () => {
+    if (wishFlag) {
+      removeFromWishList(product._id);
+    } else {
+      addToWishList(product._id);
+    }
+    setWishFlag(!wishFlag);
+  };
+
+  const handleAddClick = async () => {
+    const count = await addToCart(product._id);
+    setCartCount(count);
+  };
+
+  useEffect(() => {
+    const isWished = wishedItems.some((item) => item._id === product._id);
+    setWishFlag(isWished);
+  }, [wishedItems, product._id]);
+
+  async function removeFromWishList(productId) {
+    let { data } = await axios.delete(
+      `https://ecommerce.routemisr.com/api/v1/wishlist/${productId}`,
+      {
+        headers: {
+          token: localStorage.getItem("Token"),
+        },
+      }
+    );
+
+    toast.success("Item Removed", {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+  }
 
   return (
     <>
@@ -38,9 +86,9 @@ export default function Product({ product }) {
             </span>
             <button
               onClick={() => {
-                addToWishList(product._id);
+                handleWishClick();
               }}>
-              <FaHeart />
+              <FaHeart className={wishFlag ? "text-red-500" : "text-black"} />
             </button>
           </div>
           <p className="text-lg font-semibold my-3">{product.price} EGP</p>
@@ -48,8 +96,7 @@ export default function Product({ product }) {
             <button
               className="w-3/4 bg-green-500 text-white py-1 px-4 rounded-md"
               onClick={() => {
-                addToCart(product._id);
-                setCartCount(cartCount + 1);
+                handleAddClick();
               }}>
               Add To Cart
             </button>
