@@ -5,7 +5,7 @@ import Product from "./../Product/Product";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 import Pagination from "@mui/material/Pagination";
 import LoadingScreen2 from "../LoadingScreen2/LoadingScreen2";
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Home() {
@@ -18,15 +18,16 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, [page]);
 
-  function getProducts() {
+  function getProducts(page) {
     return axios.get(
       `https://ecommerce.routemisr.com/api/v1/products?page=${page}`
     );
   }
 
-  let { data, isLoading, s } = useQuery({
-    queryKey: ["products"],
-    queryFn: getProducts,
+  let { data, isLoading } = useQuery({
+    queryKey: ["products", page],
+    queryFn: () => getProducts(page),
+    placeholderData: keepPreviousData,
     gcTime: 30000,
     retry: 3,
     retryDelay: 2000,
@@ -41,7 +42,7 @@ export default function Home() {
         </Helmet>
       </HelmetProvider>
 
-      <section className="mt-10 mb-6">
+      <section className=" ">
         <h1 className="text-4xl font-bold text-green-500 text-center mb-8">
           All Products
         </h1>
