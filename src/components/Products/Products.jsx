@@ -42,7 +42,7 @@ export default function Home() {
         </Helmet>
       </HelmetProvider>
 
-      <section className="mt-10 mb-6 ">
+      <section className="mt-10 mb-6">
         <h1 className="text-4xl font-bold text-green-500 text-center mb-8">
           All Products
         </h1>
