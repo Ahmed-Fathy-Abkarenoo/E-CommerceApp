@@ -47,7 +47,7 @@ export default function ForgotPassword() {
         "https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords",
         values
       );
-      navigator("/");
+      // navigator("/");
       setIsLoading(false);
       setClick(true);
     } catch (error) {
