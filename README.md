@@ -6,16 +6,16 @@ This React-based web application simulates an e-commerce platform where users ca
 
 Technologies Used:
 
--React: For building the dynamic user interface and managing state.
--Tailwind CSS: For fast and responsive UI styling.
--Material UI (MUI): For pre-built components and design consistency.
--Axios: For making HTTP requests to the real API.
--React Query: For data fetching, caching, and synchronization.
--Yup & Formik: For form validation and handling.
--React Router: For client-side routing and navigation.
--React Toastify: For user-friendly notifications.
--Slick Carousel & React Slick: For interactive product sliders.
--Animate.css: For adding animations to enhance the user experience.
+* React: For building the dynamic user interface and managing state.
+* Tailwind CSS: For fast and responsive UI styling.
+* Material UI (MUI): For pre-built components and design consistency.
+* Axios: For making HTTP requests to the real API.
+* React Query: For data fetching, caching, and synchronization.
+* Yup & Formik: For form validation and handling.
+* React Router: For client-side routing and navigation.
+* React Toastify: For user-friendly notifications.
+* Slick Carousel & React Slick: For interactive product sliders.
+* Animate.css: For adding animations to enhance the user experience.
 
 
 Development Tools:
